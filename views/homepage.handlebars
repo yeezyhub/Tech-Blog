@@ -1,19 +1,15 @@
-<!-- Loop over each object in the projects array -->
+<!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
-<div class="row mb-4 post">
-  <div class="col-md-5">
+<div class="card">
+  <div class="card-header">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/post/{{post.id}}">{{post.name}}</a>
+      <a href="/post/{{post.id}}">{{post.title}}</a>
     </h2>
-    <p>
-      <!-- Pass needed_funding value to the helper function -->
-
-    </p>
-    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+    <p class="post-info">Posted by {{post.user.name}} on {{format_date post.date_created}}</p>
   </div>
-  <div class="col-md-7">
-    <p>
+  <div>
+    <p class="card-desc">
       {{post.description}}
     </p>
   </div>

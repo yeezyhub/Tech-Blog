@@ -1,0 +1,27 @@
+.card-header {
+    display: flex;
+}
+
+.post-info {
+    margin-inline-start: auto;
+}
+
+.card {
+    margin: 3vw;
+}
+
+.card-desc {
+    margin: 2vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+.center{
+    justify-content: center;
+}
+
+.navbar{
+    padding-left: 2vw;
+}
