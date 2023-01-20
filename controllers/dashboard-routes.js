@@ -9,6 +9,7 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', withAuth, (req, res) => {
+    console.log('Dashboard route hit!*******************************************************************************\n\n\n\n\n\n\n');
     Post.findAll({
             where: {
                 user_id: req.session.user_id

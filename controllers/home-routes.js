@@ -8,6 +8,7 @@ const {
 
 
 router.get('/', (req, res) => {
+    console.log('Dashboard route hit!*******************************************************************************\n\n\n\n\n\n\n');
     Post.findAll({
             attributes: [
                 'id',
@@ -112,10 +113,10 @@ router.get('/signup', (req, res) => {
 });
 
 
-router.get('*', (req, res) => {
-    res.status(404).send("Can't go there!");
-    // res.redirect('/');
-})
+// router.get('*', (req, res) => {
+//     res.status(404).send("Can't go there!");
+//     // res.redirect('/');
+// })
 
 
 module.exports = router;
