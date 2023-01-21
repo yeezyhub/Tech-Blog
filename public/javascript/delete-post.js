@@ -1,3 +1,4 @@
+//Delete Post Function
 async function deleteFormHandler(event) {
     event.preventDefault();
 

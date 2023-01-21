@@ -9,26 +9,31 @@
 </head>
 
 <body>
+    {{!-- Navbar --}}
     <div class="wrapper">
         <header>
             <h1>
                 <a href="/">Home</a>
             </h1>
             <nav>
-             {{#if loggedIn}}
+                {{!-- If the user is logged in --}}
+                {{#if loggedIn}}
                 <a href="/dashboard">Dashboard</a>
                 <button id="logout" class="btn-no-style logout">Logout</button>
+                {{!-- If the user is not logged in --}}
                 {{else}}
                 <a href="/login">Login</a>
                 {{/if}}
             </nav>
         </header>
+        {{!-- Logo --}}
         <div class="site-row">
             <div class="site-name">
                 <h1>The Tech Blog</h1>
             </div>
         </div>
         <main>
+            {{!-- Body --}}
             {{{ body }}}
         </main>
     </div>

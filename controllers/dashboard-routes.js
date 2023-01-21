@@ -7,9 +7,8 @@ const {
 } = require('../models');
 const withAuth = require('../utils/auth');
 
-
+//Dashboard
 router.get('/', withAuth, (req, res) => {
-    console.log('Dashboard route hit!*******************************************************************************\n\n\n\n\n\n\n');
     Post.findAll({
             where: {
                 user_id: req.session.user_id
@@ -49,6 +48,7 @@ router.get('/', withAuth, (req, res) => {
         });
 });
 
+//Edit Post in Dashboard
 router.get('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
             where: {
@@ -97,6 +97,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         });
 })
 
+//Add Post in Dashboard
 router.get('/new', (req, res) => {
     res.render('add-post', {
         loggedIn: true

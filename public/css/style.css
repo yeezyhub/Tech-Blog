@@ -1,7 +1,9 @@
+/* Universal Selector */
 * {
     box-sizing: border-box;
 }
 
+/* Body and HTML */
 body,
 html {
     height: 100%;
@@ -11,11 +13,13 @@ html {
     color: #333;
 }
 
+/* Main */
 main,
 .site-name {
     background-color: #b8cba2;
 }
 
+/* Anchor Elements Styling */
 a,
 .btn-no-style,
 #comment-subtitle {
@@ -31,8 +35,10 @@ a {
     text-decoration: none;
     font-weight: bold;
     transition: color .1s;
+    margin-right: 2vw;
 }
 
+/* Button Styling */
 button {
     background-color: #2c2307;
     border: 0;
@@ -48,16 +54,45 @@ button:hover {
     background-color: #4f4938;
 }
 
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+
+.btn-no-style:hover {
+    background: none;
+}
+
+/* Delete Button */
+.delete-post-btn {
+    background-color: #d41414;
+}
+
+.delete-post-btn:hover {
+    background-color: #ff643d;
+}
+
+
+/* List of Posts */
 .post-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
+/* Go Back Button */
 .go-back {
     color: #2c2307;
 }
 
+/* Text Area Styling */
 textarea,
 input {
     padding: .5%;
@@ -76,6 +111,7 @@ textarea {
     min-height: 100px;
 }
 
+
 form>div {
     margin-bottom: 2%;
 }
@@ -92,6 +128,7 @@ form label {
     flex-direction: column;
 }
 
+/* Post Info */
 .info-section {
     padding: 5px 10px;
     display: flex;
@@ -105,11 +142,16 @@ header,
     background-color: #2c2307;
 }
 
-.site-row{
-    justify-content: left!important;
+.site-row {
+    justify-content: left !important;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    justify-content: center;
+
 }
 
-.site-name{
+/* Website Logo */
+.site-name {
     margin-bottom: 1vw;
     margin-left: 1vw;
     padding: 0px 10px;
@@ -117,6 +159,7 @@ header,
     border-radius: 2vw;
 }
 
+/* Post Styling */
 .login-page,
 .sign-in-page,
 .new-form-page,
@@ -138,58 +181,28 @@ header,
 }
 
 .post-name,
-.post-title-section, .new-page {
+.post-title-section,
+.new-page {
     padding-top: 10px;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
     padding: 0 1%;
 }
 
-a{
-    margin-right: 2vw;
-}
-
 header h1 {
     font-size: 1em;
 }
 
-.site-row {
-    display: flex;
-    border-bottom: 1px solid #ccc;
-    justify-content: center;
-}
-
+/* Main */
 main {
     flex: 1;
     padding: 2% 4%;
 }
 
-.btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-}
-
-.btn-no-style:hover {
-    background: none;
-}
-
-.delete-post-btn {
-    background-color: #d41414;
-}
-
-.delete-post-btn:hover {
-    background-color: #ff643d;
-}
 
 .post {
     margin-bottom: 2%;
@@ -197,7 +210,7 @@ main {
     border: 3px solid black;
 }
 
-h1{
+h1 {
     margin: 1vw;
 }
 

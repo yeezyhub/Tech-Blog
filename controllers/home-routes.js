@@ -6,9 +6,8 @@ const {
     Comment
 } = require('../models');
 
-
+//Homepage
 router.get('/', (req, res) => {
-    console.log('Dashboard route hit!*******************************************************************************\n\n\n\n\n\n\n');
     Post.findAll({
             attributes: [
                 'id',
@@ -46,6 +45,7 @@ router.get('/', (req, res) => {
         });
 });
 
+//Single Post
 router.get('/post/:id', (req, res) => {
     Post.findOne({
             where: {
@@ -94,6 +94,7 @@ router.get('/post/:id', (req, res) => {
         });
 });
 
+//Login Redirect
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -103,6 +104,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//Signup Redirect
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -111,12 +113,5 @@ router.get('/signup', (req, res) => {
 
     res.render('signup');
 });
-
-
-// router.get('*', (req, res) => {
-//     res.status(404).send("Can't go there!");
-//     // res.redirect('/');
-// })
-
 
 module.exports = router;

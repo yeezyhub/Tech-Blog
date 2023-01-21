@@ -1,3 +1,4 @@
+//New Post Function
 async function newFormHandler(event) {
   event.preventDefault();
 
